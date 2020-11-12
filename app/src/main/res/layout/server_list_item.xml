@@ -14,11 +14,12 @@
 
     <ImageView
         android:id="@+id/iv_flag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginStart="@dimen/lo_16dpGrid"
         android:layout_marginLeft="@dimen/lo_16dpGrid"
         android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
         android:contentDescription="name of the country" />
 
 
@@ -36,18 +37,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1" />
-
-    <ImageView
-        android:id="@+id/iv_signal_strength"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="@dimen/lo_16dpGrid"
-        android:layout_marginRight="@dimen/lo_16dpGrid"
-        android:layout_marginStart="@dimen/lo_16dpGrid"
-        android:layout_marginLeft="@dimen/lo_16dpGrid"
-        android:layout_gravity="center"
-        android:background="@drawable/ic_signal_medium" />
-
 
 </LinearLayout>
 

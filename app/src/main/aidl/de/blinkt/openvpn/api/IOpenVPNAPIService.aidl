@@ -2,7 +2,7 @@
 package de.blinkt.openvpn.api;
 
 import de.blinkt.openvpn.api.APIVpnProfile;
-import de.blinkt.openvpn.api.IOpenVPNStatusCallback;
+import de.blinkt.openvpn.api.IOpenVPNStatusCallback; 
 
 import android.content.Intent;
 import android.os.ParcelFileDescriptor;
@@ -18,7 +18,7 @@ interface IOpenVPNAPIService {
 	boolean addVPNProfile (String name, String config);
 	
 	/** start a profile using a config as inline string. Make sure that all needed data is inlined,
-	 * e.g., using <ca>...</ca> or <auth-user-data>...</auth-user-data>
+	 * e.g., using <ca>...</ca> or <auth-user-pass>...</auth-user-pass>
 	 * See the OpenVPN manual page for more on inlining files */
 	void startVPN (in String inlineconfig);
 	

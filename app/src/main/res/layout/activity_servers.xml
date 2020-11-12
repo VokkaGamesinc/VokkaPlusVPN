@@ -28,9 +28,10 @@
 
             <ImageView
                 android:id="@+id/iv_servers_go_back"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:background="@drawable/ic_go_back" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_go_back"
+                />
         </LinearLayout>
 
         <View
@@ -47,7 +48,9 @@
             android:layout_marginBottom="@dimen/lo_16dpGrid"
             android:gravity="center"
             android:text="Servers"
-            android:textSize="18sp" />
+            android:textStyle="bold"
+            android:textColor="@color/colorDarkBackground"
+            android:textSize="20sp" />
 
 
         <View
@@ -68,16 +71,17 @@
             android:paddingBottom="@dimen/lo_16dpGrid">
 
             <ImageView
-                android:id="@+id/iv_server_refresh"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@drawable/ic_servers_cloud"/>
+                android:background="@drawable/ic_go_back"
+                android:visibility="invisible"/>
+
         </LinearLayout>
 
 
     </LinearLayout>
 
-
+<!--
     <LinearLayout
         android:id="@+id/ll_server_list"
         android:layout_width="match_parent"
@@ -93,23 +97,74 @@
             android:headerDividersEnabled="true"
             android:divider="@color/colorLightList"
             android:dividerHeight="1dp"
-            android:visibility="gone"
             android:scrollbars="vertical">
 
         </ListView>
 
+
+    </LinearLayout>-->
+
+
+ <!--   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adViewCardItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/adMobAppBannerID">>
+        </com.google.android.gms.ads.AdView>
+
         <ListView
-            android:id="@+id/ls_servers_list_dark"
+            android:id="@+id/ls_servers_list_light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:footerDividersEnabled="true"
             android:headerDividersEnabled="true"
-            android:visibility="gone"
-            android:divider="@color/colorDarkList"
+            android:divider="@color/colorLightList"
             android:dividerHeight="1dp"
+            android:scrollbars="vertical">
+        </ListView>
+    </RelativeLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/ls_servers_list_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:divider="@color/colorLightList"
+            android:dividerHeight="1dp"
+            android:layout_weight="1"
             android:scrollbars="vertical">
 
         </ListView>
+
+
+<!--
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/adMobAppBannerID"
+            android:layout_weight="0">
+        </com.google.android.gms.ads.AdView>
+
+-->
+
     </LinearLayout>
+
 
 </LinearLayout>
