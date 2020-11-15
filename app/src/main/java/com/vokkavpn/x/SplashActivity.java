@@ -1,6 +1,7 @@
 package com.vokkavpn.x;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -14,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.karumi.dexter.Dexter;
@@ -31,11 +33,11 @@ import java.util.List;
 public class SplashActivity extends AppCompatActivity {
 
 
-    private static int m_nWhatHandler = 1;
-    private static long	m_lDelayTime = 2000;
-    private TextView txtVersion;
+    private static final int m_nWhatHandler = 1;
+    private static final long	m_lDelayTime = 2000;
     private Handler mHandler;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
-        txtVersion = (TextView)findViewById(R.id.txtversion);
+        TextView txtVersion = (TextView) findViewById(R.id.txtversion);
 
         PackageInfo pInfo;
         try {
@@ -74,8 +76,9 @@ public class SplashActivity extends AppCompatActivity {
         Dexter.withActivity(this)
                 .withPermissions(
                         Manifest.permission.READ_PHONE_STATE
-                        )// you can add permissions here comma separated....
+                )// you can add permissions here comma separated....
                 .withListener(new MultiplePermissionsListener() {
+                    @SuppressLint("HandlerLeak")
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
                         // check if all permissions are granted
@@ -83,11 +86,11 @@ public class SplashActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "All permissions are granted!", Toast.LENGTH_SHORT).show();
 
                             mHandler = new Handler(){
-                               @Override
-                               public void handleMessage(Message msg) {
-                                   gotoNext();
-                               }
-                           };
+                                @Override
+                                public void handleMessage(@NonNull Message msg) {
+                                    gotoNext();
+                                }
+                            };
 
                             mHandler.sendEmptyMessageDelayed(m_nWhatHandler, m_lDelayTime);
 

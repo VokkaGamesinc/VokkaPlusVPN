@@ -1,18 +1,12 @@
 package com.vokkavpn.x;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -23,8 +17,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.vokkavpn.x.Util.ApiUtils;
@@ -33,6 +25,7 @@ import com.vokkavpn.x.Util.Utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 
 import de.blinkt.openvpn.core.ICSOpenVPNApplication;
@@ -45,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText editEmailView;
     TextView tv_pp;
     CheckBox ckRem;
-    String imei=null;
 
 
     @Override
@@ -59,8 +51,6 @@ public class LoginActivity extends AppCompatActivity {
 
         ckRem = (CheckBox) findViewById(R.id.chkrem);
         ckRem.setChecked(Utils.readRemember(getApplicationContext()));
-        imei=Utils.getDeviceIMEI(getApplicationContext());
-        Log.e("IMEI------>",imei);
         tv_pp = findViewById(R.id.tv_pp);
         tv_pp.setPaintFlags(tv_pp.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
         tv_pp.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         la_animation = findViewById(R.id.animation_view);
         la_animation.setVisibility(View.INVISIBLE);
         editEmailView =  findViewById(R.id.editEmail);
-        
+
         if(Utils.readRemember(getApplicationContext()))
         {
             if(!Utils.readusername(getApplicationContext()).equalsIgnoreCase(""))
@@ -106,13 +96,13 @@ public class LoginActivity extends AppCompatActivity {
                     if(Utils.hasInternetConnection(getApplicationContext()))
                     {
 
-                       try {
-                           new LoginTask().execute("");
-                       }
-                       catch (Exception e)
-                       {
-                           e.printStackTrace();
-                       }
+                        try {
+                            new LoginTask().execute("");
+                        }
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
                     }
                     else
                     {
@@ -126,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("StaticFieldLeak")
     class LoginTask extends AsyncTask<String, Integer, String> {
 
         @Override
@@ -133,7 +124,7 @@ public class LoginActivity extends AppCompatActivity {
             super.onPreExecute();
 
 
-           la_animation.setVisibility(View.VISIBLE);
+            la_animation.setVisibility(View.VISIBLE);
 
         }
 
@@ -162,13 +153,12 @@ public class LoginActivity extends AppCompatActivity {
         String result = "";
         String hpassword = Utils.md5(Utils.LoginPASS);
 
-
         JSONObject loginJson = new JSONObject();
         try {
             loginJson.put(Utils.Action, Utils.LoginAction);
             loginJson.put(Utils.Username, m_strEmail);
             loginJson.put(Utils.Password,hpassword);
-            loginJson.put(Utils.getDeviceIMEI,imei);
+            loginJson.put(Utils.getDeviceIMEI,Utils.getDeviceIMEI(getApplicationContext()));
 
         } catch (JSONException e) {
             // TODO Auto-generated catch block this way its working
@@ -218,7 +208,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
 
-                } catch (JSONException e) {
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
