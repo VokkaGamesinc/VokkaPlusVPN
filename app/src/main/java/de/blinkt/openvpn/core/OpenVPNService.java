@@ -41,8 +41,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-import com.vokkavpn.x.Data;
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.Data;
+import com.vokkavpn.plus.R;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

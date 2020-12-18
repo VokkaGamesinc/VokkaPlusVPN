@@ -1,4 +1,4 @@
-package com.vokkavpn.x.model;
+package com.vokkavpn.plus.model;
 
 public class Server {
 

@@ -3,7 +3,7 @@
  * Distributed under the GNU GPL v2 with additional terms. For full terms see the file doc/LICENSE.txt
  */
 
-package com.vokkavpn.x;
+package com.vokkavpn.plus;
 
 import java.io.File;
 import java.io.FileInputStream;

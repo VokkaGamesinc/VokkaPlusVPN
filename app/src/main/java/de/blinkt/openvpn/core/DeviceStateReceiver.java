@@ -14,7 +14,7 @@ import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import android.os.Handler;
 
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.R;
 
 import de.blinkt.openvpn.core.VpnStatus.ByteCountListener;
 

@@ -20,7 +20,7 @@ import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.R;
 
 import de.blinkt.openvpn.core.*;
 import org.spongycastle.util.io.pem.PemObject;

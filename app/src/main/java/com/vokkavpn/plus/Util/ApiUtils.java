@@ -1,4 +1,4 @@
-package com.vokkavpn.x.Util;
+package com.vokkavpn.plus.Util;
 
 import java.io.IOException;
 

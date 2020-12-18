@@ -22,7 +22,7 @@ import android.os.ParcelFileDescriptor;
 import android.os.RemoteCallbackList;
 import android.os.RemoteException;
 
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.R;
 
 import java.io.IOException;
 import java.io.StringReader;

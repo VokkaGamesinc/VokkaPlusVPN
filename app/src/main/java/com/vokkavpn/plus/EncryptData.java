@@ -1,4 +1,4 @@
-package com.vokkavpn.x;
+package com.vokkavpn.plus;
 
 import android.util.Base64;
 

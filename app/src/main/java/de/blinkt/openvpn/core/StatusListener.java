@@ -14,7 +14,7 @@ import android.os.ParcelFileDescriptor;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.vokkavpn.x.BuildConfig;
+import com.vokkavpn.plus.BuildConfig;
 
 import java.io.DataInputStream;
 import java.io.File;

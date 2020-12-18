@@ -1,5 +1,6 @@
-package com.vokkavpn.x;
+package com.vokkavpn.plus;
 
+import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -33,8 +34,8 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;*/
-import com.vokkavpn.x.Util.ApiUtils;
-import com.vokkavpn.x.Util.Utils;
+import com.vokkavpn.plus.Util.ApiUtils;
+import com.vokkavpn.plus.Util.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -299,6 +300,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
 
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -342,13 +344,13 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
         tv_expire = findViewById(R.id.tv_expire);
         tv_activated = findViewById(R.id.tv_activated);
 
-        tv_user.setTypeface(RobotoMedium);
+        tv_user.setTypeface(RobotoBold);
         tv_expire.setTypeface(RobotoMedium);
         tv_activated.setTypeface(RobotoMedium);
 
-        tv_user.setText(Utils.readusername(getApplicationContext()));
-        tv_activated.setText("Activated on : "+Utils.readactivated(getApplicationContext()));
-        tv_expire.setText("Expire on : "+Utils.readexpire(getApplicationContext()));
+        tv_user.setText("Username : "+Utils.readusername(getApplicationContext()));
+        tv_activated.setText("Activated : "+Utils.readactivated(getApplicationContext()));
+        tv_expire.setText("Expiry : "+Utils.readexpire(getApplicationContext()));
         tv_message_top_text.setTypeface(RobotoMedium);
         tv_message_bottom_text.setTypeface(RobotoMedium);
 

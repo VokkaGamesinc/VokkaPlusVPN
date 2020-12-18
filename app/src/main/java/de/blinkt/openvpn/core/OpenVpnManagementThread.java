@@ -18,7 +18,7 @@ import androidx.annotation.RequiresApi;
 import android.system.Os;
 import android.util.Log;
 
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.R;
 
 import de.blinkt.openvpn.VpnProfile;
 

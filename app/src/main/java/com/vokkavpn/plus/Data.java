@@ -1,4 +1,4 @@
-package com.vokkavpn.x;
+package com.vokkavpn.plus;
 
 public class Data {
     static String FileUsername;

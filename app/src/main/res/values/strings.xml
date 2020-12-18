@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">X VPN</string>
+    <string name="app_name">Vokka Plus VPN</string>
 
-    <string name="app">Vokka X VPN</string>
+    <string name="app">Vokka Plus VPN</string>
     <string name="address">Server Address:</string>
     <string name="port">Server Port:</string>
     <string name="location">Location</string>
@@ -502,7 +502,7 @@
     <string name="string_of_two_number">%02d</string>
 
     <string name="lbl_password">Password</string>
-    <string name="lbl_email">Username</string>
+    <string name="lbl_email">Please Enter Vokka Plus Username</string>
     <string name="title_activity_login">Login</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_invalid_email">This email address is invalid</string>

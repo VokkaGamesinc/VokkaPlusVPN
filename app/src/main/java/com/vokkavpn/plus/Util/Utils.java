@@ -1,14 +1,11 @@
-package com.vokkavpn.x.Util;
+package com.vokkavpn.plus.Util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
-import android.os.Bundle;
 import android.provider.Settings;
-import android.telephony.TelephonyManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,7 +20,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Utils {
 
-    public static String BASE = "/data/data/com.vokkavpn.x";
+    public static String BASE = "/data/data/com.vokkavpn.plus";
 
     public static String LoginUrl = "https://vpn.globalsend.us/api3/api.php";
     public static String StatusUrl = "https://vpn.globalsend.us/app2/apid.php";
@@ -37,15 +34,20 @@ public class Utils {
     public static String Username = "appusername";
     public static String Password = "apppin";
 
-    public static String PrefName = "vokkavpnx";
+    public static String PrefName = "vokkavpnplus";
     public static String getDeviceIMEI = "imei";
     
 
-    @SuppressLint("HardwareIds")
+   /** @SuppressLint("HardwareIds")
     public static String getDeviceIMEI(Context context){
         String ts = Context.TELEPHONY_SERVICE;
         TelephonyManager mTelephonyMgr = (TelephonyManager) context.getSystemService(ts);
         return mTelephonyMgr.getDeviceId();
+    }**/
+    public static String getAndroidId(Context context) {
+        @SuppressLint("HardwareIds") String aid= Settings.Secure
+                .getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        return null==aid||0==aid.length()?"":aid;
     }
 
     public static boolean hasInternetConnection(Context context) {

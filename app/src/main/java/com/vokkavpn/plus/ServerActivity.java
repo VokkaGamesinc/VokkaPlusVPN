@@ -1,4 +1,4 @@
-package com.vokkavpn.x;
+package com.vokkavpn.plus;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,8 +22,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;*/
-import com.vokkavpn.x.Util.Utils;
-import com.vokkavpn.x.model.Server;
+import com.vokkavpn.plus.Util.Utils;
+import com.vokkavpn.plus.model.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;

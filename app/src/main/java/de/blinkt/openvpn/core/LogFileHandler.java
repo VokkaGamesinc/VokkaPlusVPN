@@ -9,7 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-import com.vokkavpn.x.R;
+import com.vokkavpn.plus.R;
 
 import java.io.BufferedInputStream;
 import java.io.File;
