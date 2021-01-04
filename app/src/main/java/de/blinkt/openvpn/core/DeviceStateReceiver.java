@@ -83,6 +83,11 @@ public class DeviceStateReceiver extends BroadcastReceiver implements ByteCountL
 
 
     @Override
+    public void onCreate() {
+
+    }
+
+    @Override
     public void updateByteCount(long in, long out, long diffIn, long diffOut) {
         if (screen != connectState.PENDINGDISCONNECT)
             return;

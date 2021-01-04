@@ -223,6 +223,8 @@ public class VpnStatus {
     }
 
     public interface ByteCountListener {
+        void onCreate();
+
         void updateByteCount(long in, long out, long diffIn, long diffOut);
     }
 

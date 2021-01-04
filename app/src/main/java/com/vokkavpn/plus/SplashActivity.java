@@ -24,6 +24,7 @@ import com.karumi.dexter.listener.DexterError;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.onesignal.OneSignal;
 import com.vokkavpn.plus.Util.Utils;
 
 import java.util.List;
@@ -31,6 +32,7 @@ import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
 
+    private static final String ONESIGNAL_APP_ID = "38d3b739-8380-4049-a71b-d814a6ba3c73";
 
     private static final int m_nWhatHandler = 1;
     private static final long	m_lDelayTime = 2000;
@@ -57,6 +59,13 @@ public class SplashActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
 
     }
 

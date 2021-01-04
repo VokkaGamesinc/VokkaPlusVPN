@@ -34,6 +34,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;*/
+import com.onesignal.OneSignal;
 import com.vokkavpn.plus.Util.ApiUtils;
 import com.vokkavpn.plus.Util.Utils;
 
@@ -93,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
     /*private AdView mAdView;
     private InterstitialAd mInterstitialAd;
     boolean showAd = false;*/
-
 
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -907,6 +907,10 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
 
     }
 
+    @Override
+    public void onCreate() {
+
+    }
 
     @Override
     public void updateByteCount(long ins, long outs, long diffIns, long diffOuts) {
