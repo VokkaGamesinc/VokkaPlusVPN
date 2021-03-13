@@ -30,7 +30,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.vokkavpn.plus.R;
+import com.s86vpn.plus.R;
 
 import java.io.IOException;
 

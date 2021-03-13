@@ -10,7 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import com.vokkavpn.plus.R;
+import com.s86vpn.plus.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

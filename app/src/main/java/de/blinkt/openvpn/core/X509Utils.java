@@ -10,7 +10,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.text.TextUtils;
 
-import com.vokkavpn.plus.R;
+import com.s86vpn.plus.R;
 
 import de.blinkt.openvpn.VpnProfile;
 import org.spongycastle.util.io.pem.PemObject;

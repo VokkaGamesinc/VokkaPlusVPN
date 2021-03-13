@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Vokka Plus VPN</string>
+    <string name="app_name">S86 VPN</string>
 
-    <string name="app">Vokka Plus VPN</string>
+    <string name="app">S86 VPN</string>
     <string name="address">Server Address:</string>
     <string name="port">Server Port:</string>
     <string name="location">Location</string>
@@ -502,16 +502,12 @@
     <string name="string_of_two_number">%02d</string>
 
     <string name="lbl_password">Password</string>
-    <string name="lbl_email">Please Enter Vokka Plus Username</string>
+    <string name="lbl_email">Please Enter S86 VPN Username</string>
     <string name="title_activity_login">Login</string>
     <string name="error_field_required">This field is required</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
-
-    <!-- <string name="adMobAppID">ca-app-pub-8251123769657509~5025929305</string>
-     <string name="adMobAppBannerID">ca-app-pub-8251123769657509/1025499765</string>
-     <string name="adMobAppFullID">ca-app-pub-8251123769657509/6581078773</string>-->
 
     <!--<string name="adMobAppID">ca-app-pub-8251123769657509~5025929305</string>
      <string name="adMobAppBannerID">ca-app-pub-3940256099942544/6300978111</string>

@@ -11,7 +11,7 @@ import android.os.Build;
 import android.os.HandlerThread;
 import android.os.Message;
 
-import com.vokkavpn.plus.R;
+import com.s86vpn.plus.R;
 
 import java.io.File;
 import java.io.PrintWriter;

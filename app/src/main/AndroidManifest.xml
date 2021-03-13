@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.vokkavpn.plus">
+    package="com.s86vpn.plus">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -77,7 +77,7 @@
         </receiver>
 
         <activity
-            android:name="com.vokkavpn.plus.SplashActivity"
+            android:name="com.s86vpn.plus.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -95,23 +95,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.vokkavpn.plus.LoginActivity"
+        <activity android:name="com.s86vpn.plus.LoginActivity"
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
 
-        <activity android:name="com.vokkavpn.plus.MainActivity"
+        <activity android:name="com.s86vpn.plus.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
 
-        <activity android:name="com.vokkavpn.plus.ServerActivity"
+        <activity android:name="com.s86vpn.plus.ServerActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
 
         <provider
-            android:name="com.vokkavpn.plus.FileProvider"
+            android:name="com.s86vpn.plus.FileProvider"
             android:authorities=".FileProviderplus"
             android:exported="true"
             android:grantUriPermissions="true"

@@ -19,7 +19,7 @@ import android.os.Build;
 import android.os.StrictMode;
 import android.util.Log;
 
-import com.vokkavpn.plus.R;
+import com.s86vpn.plus.R;
 
 import java.util.Calendar;
 

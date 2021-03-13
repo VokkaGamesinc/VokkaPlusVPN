@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "252326558803",
-    "project_id": "vokka-vpn-plus",
-    "storage_bucket": "vokka-vpn-plus.appspot.com"
+    "project_number": "271432514469",
+    "project_id": "s86vpn-1615627496926",
+    "storage_bucket": "s86vpn-1615627496926.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:252326558803:android:5b7805715593e4705c5aa6",
+        "mobilesdk_app_id": "1:271432514469:android:8c5decbb62de60b056064c",
         "android_client_info": {
-          "package_name": "com.vokkavpn.plus"
+          "package_name": "com.s86vpn.plus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "252326558803-snoqfij4rrbcujs5hm4upmqir7dupvuf.apps.googleusercontent.com",
+          "client_id": "271432514469-1pcka26p852k33d430hpkrc1qe0qfght.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC9-Czed-hef1dC_93ho_YmN2p9lt9x-FI"
+          "current_key": "AIzaSyBppQT4S4nCJwucnaEwGoDXvvEiUBWorc8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "252326558803-snoqfij4rrbcujs5hm4upmqir7dupvuf.apps.googleusercontent.com",
+              "client_id": "271432514469-1pcka26p852k33d430hpkrc1qe0qfght.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
