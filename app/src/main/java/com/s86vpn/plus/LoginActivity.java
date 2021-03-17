@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://www.globalsend.us/policy.html"));
+                intent.setData(Uri.parse("https://vokkagames.com/policy.html"));
                 startActivity(intent);
             }
         });
