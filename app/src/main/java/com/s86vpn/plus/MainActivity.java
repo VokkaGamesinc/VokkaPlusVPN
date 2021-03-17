@@ -28,12 +28,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-/*import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;*/
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.s86vpn.plus.Util.ApiUtils;
 import com.s86vpn.plus.Util.Utils;
 
@@ -52,9 +52,9 @@ import java.util.Date;
 
 import de.blinkt.openvpn.LaunchVPN;
 import de.blinkt.openvpn.VpnProfile;
-import de.blinkt.openvpn.core.ICSOpenVPNApplication;
 import de.blinkt.openvpn.core.ConfigParser;
 import de.blinkt.openvpn.core.ConnectionStatus;
+import de.blinkt.openvpn.core.ICSOpenVPNApplication;
 import de.blinkt.openvpn.core.IOpenVPNServiceInternal;
 import de.blinkt.openvpn.core.OpenVPNService;
 import de.blinkt.openvpn.core.ProfileManager;
@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
     boolean hasFile = false;
     String FileID = "NULL", File = "NULL", City = "NULL", Image = "NULL";
 
-    /*private AdView mAdView;
+    private AdView mAdView;
     private InterstitialAd mInterstitialAd;
-    boolean showAd = false;*/
+    boolean showAd = false;
 
     private ServiceConnection mConnection = new ServiceConnection() {
         @Override
@@ -120,14 +120,14 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
         super.onRestart();
     }
 
-   /* private  void initAdmob()
+    private  void initAdmob()
     {
 
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
-*/
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
                 hasFile = false;
             }
 
-            //initAdmob();
+            initAdmob();
 
             try {
                 VpnStatus.addStateListener(this);
@@ -277,9 +277,9 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
     @Override
     protected void onPause() {
         super.onPause();
-       /* if (mAdView != null) {
+        if (mAdView != null) {
             mAdView.pause();
-        }*/
+        }
         unbindService(mConnection);
     }
 
@@ -287,9 +287,9 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
     public void onDestroy() {
         super.onDestroy();
 
-        /*if (mAdView != null) {
+        if (mAdView != null) {
             mAdView.destroy();
-        }*/
+        }
     }
 
     @Override
@@ -305,16 +305,16 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-/*
+
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
-        });*/
+        });
 
-        /*mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView);
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.adMobAppFullID));*/
+        mInterstitialAd.setAdUnitId(getString(R.string.adMobAppFullID));
 
 
         Date Today = Calendar.getInstance().getTime();
@@ -741,7 +741,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
 
 
     private void start_vpn(String VPNFile){
-       // showAd = true;
+        showAd = true;
         SharedPreferences sp_settings;
         sp_settings = getSharedPreferences("daily_usage", 0);
         long connection_today = sp_settings.getLong(TODAY + "_connections", 0);
@@ -870,8 +870,6 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
         });
     }
 
-
-   /* @Override
     public void updateState(final String state, String logmessage, int localizedResId, ConnectionStatus level) {
         runOnUiThread(new Runnable() {
             @Override
@@ -881,24 +879,23 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
                     ICSOpenVPNApplication.connection_status = 2;
                     EnableConnectButton = true;
 
-                   *//* if (showAd && mInterstitialAd.isLoaded()) {
+                    if (showAd && mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
                         showAd = false;
-                    }*//*
-
+                    }
 
                 }
                 else if (state.equals("NOPROCESS"))
                 {
                     ICSOpenVPNApplication.isStart = false;
-                 //   showAd = true;
+                    showAd = true;
                     ICSOpenVPNApplication.connection_status = 0;
                     OpenVPNService.abortConnectionVPN = true;
 
                 }
             }
         });
-    }*/
+    }
 
     @Override
     public void setConnectedVPN(String uuid) {
