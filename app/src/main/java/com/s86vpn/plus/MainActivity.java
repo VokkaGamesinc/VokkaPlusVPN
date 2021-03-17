@@ -858,10 +858,16 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
                     ICSOpenVPNApplication.isStart = true;
                     ICSOpenVPNApplication.connection_status = 2;
                     EnableConnectButton = true;
+
+                    if (showAd && mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                        showAd = false;
+                    }
                 }
                 else if (state.equals("NOPROCESS"))
                 {
                     ICSOpenVPNApplication.isStart = false;
+                    showAd = true;
                     ICSOpenVPNApplication.connection_status = 0;
                     OpenVPNService.abortConnectionVPN = true;
 
@@ -870,7 +876,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
         });
     }
 
-    public void updateState(final String state, String logmessage, int localizedResId, ConnectionStatus level) {
+/*    public void updateState(final String state, String logmessage, int localizedResId, ConnectionStatus level) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -881,7 +887,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
 
                     if (showAd && mInterstitialAd.isLoaded()) {
                         mInterstitialAd.show();
-                        showAd = false;
+                        showAd = true;
                     }
 
                 }
@@ -896,7 +902,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
             }
         });
     }
-
+*/
     @Override
     public void setConnectedVPN(String uuid) {
 
