@@ -813,7 +813,7 @@ public class MainActivity extends AppCompatActivity implements VpnStatus.ByteCou
     }
 
     public void stop_vpn(){
-        //showAd = false;
+        showAd = false;
         ICSOpenVPNApplication.connection_status = 0;
         OpenVPNService.abortConnectionVPN = true;
         ProfileManager.setConntectedVpnProfileDisconnected(this);

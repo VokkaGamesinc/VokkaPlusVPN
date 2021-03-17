@@ -509,7 +509,7 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
 
-    <string name="adMobAppID">ca-app-pub-8251123769657509~2020230274</string>
+     <string name="adMobAppID">ca-app-pub-8251123769657509~2020230274</string>
      <string name="adMobAppBannerID">ca-app-pub-8251123769657509/9324005220</string>
      <string name="adMobAppFullID">ca-app-pub-8251123769657509/7759642117</string>
 </resources>

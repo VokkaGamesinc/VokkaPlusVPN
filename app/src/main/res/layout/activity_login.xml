@@ -119,4 +119,5 @@
             app:lottie_rawRes="@raw/loading_circle" />
 
     </LinearLayout>
+
 </ScrollView>
